@@ -25,6 +25,15 @@ class The2ndVCthatImClulessAbout: UIViewController {
         }
         let letssee = UIImage(data: QRdata!)
         UIIMAGE.image = letssee
+        if lightingMode == "Dark"{
+            view.overrideUserInterfaceStyle = .dark
+        }
+        if lightingMode == "Light"{
+            view.overrideUserInterfaceStyle = .light
+        }
+        else{
+            view.overrideUserInterfaceStyle = .light
+        }
         
     }
     
@@ -47,6 +56,18 @@ class The2ndVCthatImClulessAbout: UIViewController {
         
         return(fetchedResults)!
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if lightingMode == "Dark"{
+            view.overrideUserInterfaceStyle = .dark
+        }
+        else if lightingMode == "Light"{
+            view.overrideUserInterfaceStyle = .light
+        }
+        else{
+            view.overrideUserInterfaceStyle = .light
+        }
     }
     
 

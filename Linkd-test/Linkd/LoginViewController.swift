@@ -34,7 +34,7 @@ class LoginViewController: UIViewController {
         passwordField.isSecureTextEntry = true
         self.statusLabel.text = ""
         self.statusLabel.textAlignment = .center
-
+        
         // Do any additional setup after loading the view.
     }
     

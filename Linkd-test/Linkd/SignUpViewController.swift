@@ -18,7 +18,7 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
         passwordField.isSecureTextEntry = true
         self.statusLabel.text = ""
-
+        
         // Do any additional setup after loading the view.
     }
     

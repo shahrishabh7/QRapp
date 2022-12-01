@@ -1,16 +1,16 @@
 //
-//  ViewController.swift
+//  TestViewController.swift
 //  Linkd
 //
-//  Created by Julian Wearden on 11/14/22.
+//  Created by Macbook Pro 15 on 11/30/22.
 //
 
 import UIKit
 
 var indexNum: Int = 0
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
-    
+class TestViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
     }
@@ -39,12 +39,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //tableView.delegate = self
-        //tableView.dataSource = self
+        tableView.delegate = self
+        tableView.dataSource = self
         tableView.reloadData()
     }
 
     @IBOutlet weak var tableView: UITableView!
     
 }
+
+
 

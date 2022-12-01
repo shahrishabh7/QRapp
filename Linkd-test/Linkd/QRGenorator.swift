@@ -16,7 +16,15 @@ class QRGenorator: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if lightingMode == "Dark"{
+            view.overrideUserInterfaceStyle = .dark
+        }
+        if lightingMode == "Light"{
+            view.overrideUserInterfaceStyle = .light
+        }
+        else{
+            view.overrideUserInterfaceStyle = .light
+        }
     }
     
     @IBOutlet var TestQR: UIImageView!

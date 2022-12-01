@@ -11,7 +11,7 @@ import CoreData
 let appDelegate = UIApplication.shared.delegate as! AppDelegate
 let context = appDelegate.persistentContainer.viewContext
 
-let settings = ["Lighting Mode", "Default Font", "Sign Out" ]
+let settings = ["Lighting Mode", "Default Font", "Push Notifications" ]
 
 let defaults = UserDefaults.standard
 public var lightingMode = defaults.string(forKey: "lightingType")
@@ -29,8 +29,26 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        
+        lightingMode = defaults.string(forKey: "lightingType")
+        if lightingMode == "Dark"{
+            view.overrideUserInterfaceStyle = .dark
+        }
+        if lightingMode == "Light"{
+            view.overrideUserInterfaceStyle = .light
+        }
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if lightingMode == "Dark"{
+            view.overrideUserInterfaceStyle = .dark
+        }
+        else if lightingMode == "Light"{
+            view.overrideUserInterfaceStyle = .light
+        }
+        else{
+            view.overrideUserInterfaceStyle = .light
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -46,7 +64,6 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let row = indexPath.row
-        tableView.deselectRow(at: indexPath, animated: true)
         
         if (row == 0){
             let controller = UIAlertController(
@@ -59,7 +76,10 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
                 style: .default,
                 handler: {
                     action in lightingMode = "Light"
-                })
+                    defaults.set(lightingMode, forKey: "lightingType")
+                    self.view.overrideUserInterfaceStyle = .light
+                }
+            )
             controller.addAction(lightAction)
 
             let darkAction = UIAlertAction(
@@ -67,6 +87,8 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
                 style: .default,
                 handler: {
                     action in lightingMode = "Dark"
+                    defaults.set(lightingMode, forKey: "lightingType")
+                    self.view.overrideUserInterfaceStyle = .dark
                 })
             controller.addAction(darkAction)
             
@@ -83,6 +105,7 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
                 style: .default,
                 handler: {
                     action in defaultFont = "Arial"
+                    defaults.set(defaultFont, forKey: "fontType")
                 })
             controller.addAction(arialAction)
 
@@ -91,6 +114,7 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
                 style: .default,
                 handler: {
                     action in defaultFont = "Roboto"
+                    defaults.set(defaultFont, forKey: "fontType")
                 })
             controller.addAction(robotoAction)
             
@@ -99,66 +123,40 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
                 style: .default,
                 handler: {
                     action in defaultFont = "Default"
+                    defaults.set(defaultFont, forKey: "fontType")
                 })
             controller.addAction(defaultAction)
             
             present(controller, animated: true)
         }
         else if (row == 2){
-            
+            UNUserNotificationCenter.current().requestAuthorization(options:[.alert,.badge,.sound]) {
+                granted, error in
+                if granted {
+                    print("All set!")
+                } else if let error = error {
+                    print(error.localizedDescription)
+                }
+            }
         }
         else{
             
         }
-        //storeData()
-        defaults.set(lightingMode, forKey: "lightingType")
-        defaults.set(defaultFont, forKey: "fontType")
-        lightingMode = defaults.string(forKey: "lightingType")
-        defaultFont = defaults.string(forKey: "fontType")
+        tableView.deselectRow(at: indexPath, animated: true)
     }
+    
+    
+    
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
        if segue.identifier == "privatePolicySegue" {
           let vc = segue.destination as? PrivatePolicyViewController
        }
     }
+    
+    @IBAction func recognizeLongPress(_ sender: Any) {
+        performSegue(withIdentifier: "toReqFull", sender: nil)
+    }
 }
 
 
-//let fetchedResults = retrieveLightingMode()
-//let test = fetchedResults[0]
-//
-//public var lightingMode = ""
-//public var defaultFont = ""
-//func retrieveLightingMode() -> [NSManagedObject] {
-//
-//    let request = NSFetchRequest<NSFetchRequestResult>(entityName: "LightingMode")
-//    var fetchedResults:[NSManagedObject]? = nil
-//    do {
-//        try fetchedResults = context.fetch(request) as? [NSManagedObject]
-//    } catch {
-//        // if an error occurs
-//        let nserror = error as NSError
-//        NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
-//        abort()
-//    }
-//    return(fetchedResults)!
-//}
-//
-//let font = retrieveDefaultFont()
-//public var defaultFont = font.
-//
-//func retrieveDefaultFont() -> [NSManagedObject] {
-//
-//    let request = NSFetchRequest<NSFetchRequestResult>(entityName: "DefaultFont")
-//    var fetchedResults:[NSManagedObject]? = nil
-//    do {
-//        try fetchedResults = context.fetch(request) as? [NSManagedObject]
-//    } catch {
-//        // if an error occurs
-//        let nserror = error as NSError
-//        NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
-//        abort()
-//    }
-//    return(fetchedResults)!
-//}

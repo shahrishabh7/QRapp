@@ -24,6 +24,16 @@ class ShareVC: UIViewController {
         }
         let letssee = UIImage(data: QRdata!)
         UIIMAGE.image = letssee
+        
+        if lightingMode == "Dark"{
+            view.overrideUserInterfaceStyle = .dark
+        }
+        if lightingMode == "Light"{
+            view.overrideUserInterfaceStyle = .light
+        }
+        else{
+            view.overrideUserInterfaceStyle = .light
+        }
 
     }
     func retrieveQR() -> [NSManagedObject] {
