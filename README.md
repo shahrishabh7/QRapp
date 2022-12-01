@@ -18,8 +18,8 @@ https://docs.google.com/document/d/18W8brLXRsFRSJ_3WzUoxaYX4IVnn-rtRACXUl0X-wCc/
 
 | Required feature  | Description | Who / Percentage worked on  |
 | ------------- | ------------- | ------------  |
+| Welcome Page  | Create clean logo and display; add animation for fun user interaction  | 100% Rishabh  |
 | Login / register  | Allows user to create account and login  | 100% Rishabh  |
-| Home Page  | Create clean logo and display; add animation for fun user interaction  | 100% Rishabh  |
 | UI Design  | Wireframe for the app and selecting font/color styles  | 33% Sam 33% Trevor 33% Rishabh  |
 | Settings  | Allow user to set light/dark mode, change fonts, and sign out  | 100% Trevor  |
 | Profile path  | Gather info from user to store and generate Linkd card | 50% Rishabh 50% Sam |
