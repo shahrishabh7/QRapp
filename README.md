@@ -30,4 +30,5 @@ https://docs.google.com/document/d/18W8brLXRsFRSJ_3WzUoxaYX4IVnn-rtRACXUl0X-wCc/
 NOTE: our fourth team member, Julian, dropped the class right before the final presentation, so we were very shorthanded. We have listed the work below that Julian planned to do that we did not have enough time to pick up and finish:
 - implement meaningful use of multithreading
 - user profile picture / profile editing functionality
-- two minor view elements (Julian was to implement a segmented control and color picker for background customization in settings)
+- one minor view element (Julian was to implement a  color picker for background customization in settings)
+- Julian was also going to fix broken settings (ensure font changes and theme (dark/light) changes work fine)
