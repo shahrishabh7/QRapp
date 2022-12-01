@@ -1,7 +1,7 @@
 # Linkd
 A swift-built iOS app that allows for NFC business cards
 
-Name of Project: Linkd. 
+Name of Project: Linkd  
 Team members: Julian Wearden, Rishabh Shah, Sam Kartiganer, Trevor Dugan
 Dependencies: Xcode 14.1, Swift 5, Firebase for Authentication
 NOTE: we have extra packages loaded onto our project, but were unable to get rid of those, all required dependencies for our project to run are listed above.
