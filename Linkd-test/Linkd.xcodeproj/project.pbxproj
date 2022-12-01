@@ -19,6 +19,7 @@
 		337A6BD02937737C00F77FAC /* AddTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337A6BCF2937737B00F77FAC /* AddTimerViewController.swift */; };
 		337A6BD22937738700F77FAC /* CountdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337A6BD12937738700F77FAC /* CountdownViewController.swift */; };
 		337A6BDA293778A600F77FAC /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337A6BD9293778A600F77FAC /* TestViewController.swift */; };
+		3F740E30293917F5001D02FB /* LogoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F740E2F293917F5001D02FB /* LogoViewController.swift */; };
 		3F76D8FB29366E1100EB7ABF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F76D8FA29366E1100EB7ABF /* SignUpViewController.swift */; };
 		3F76D9012936703700EB7ABF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F76D9002936703600EB7ABF /* GoogleService-Info.plist */; };
 		3F76D904293670D800EB7ABF /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3F76D903293670D800EB7ABF /* FirebaseAuth */; };
@@ -45,6 +46,7 @@
 		337A6BCF2937737B00F77FAC /* AddTimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTimerViewController.swift; sourceTree = "<group>"; };
 		337A6BD12937738700F77FAC /* CountdownViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountdownViewController.swift; sourceTree = "<group>"; };
 		337A6BD9293778A600F77FAC /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		3F740E2F293917F5001D02FB /* LogoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoViewController.swift; sourceTree = "<group>"; };
 		3F76D8FA29366E1100EB7ABF /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		3F76D9002936703600EB7ABF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3F76D905293679CE00EB7ABF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				129DEAB1292310A500E3C39F /* Info.plist */,
 				129DEAA92923109F00E3C39F /* Linkd.xcdatamodeld */,
 				3F76D9002936703600EB7ABF /* GoogleService-Info.plist */,
+				3F740E2F293917F5001D02FB /* LogoViewController.swift */,
 			);
 			path = Linkd;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				A04F593A29373FB8004FC135 /* The2ndVCthatImClulessAbout.swift in Sources */,
 				A04F5934293703FA004FC135 /* MakeNameVC.swift in Sources */,
 				A04F593C293748DC004FC135 /* ShareVC.swift in Sources */,
+				3F740E30293917F5001D02FB /* LogoViewController.swift in Sources */,
 				3F76D906293679CE00EB7ABF /* LoginViewController.swift in Sources */,
 				A04F593829370507004FC135 /* WhatTFthisVCfor.swift in Sources */,
 				129DEAAB2923109F00E3C39F /* Linkd.xcdatamodeld in Sources */,
