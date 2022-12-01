@@ -9,10 +9,13 @@ import UIKit
 
 class PrivatePolicyViewController: UIViewController {
 
+    @IBOutlet weak var privacyPolicy: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view.
+        privacyPolicy.isEditable = false
+        privacyPolicy.isScrollEnabled = true
+        privacyPolicy.isUserInteractionEnabled = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
