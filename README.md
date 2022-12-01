@@ -19,10 +19,14 @@ https://docs.google.com/document/d/18W8brLXRsFRSJ_3WzUoxaYX4IVnn-rtRACXUl0X-wCc/
 | Required feature  | Description | Who / Percentage worked on  |
 | ------------- | ------------- | ------------  |
 | Login / register  | Allows user to create account and login  | 100% Rishabh  |
-| UI Design  | Wireframe for the app and selecting font/color styles  | 100% Julian  |
+| UI Design  | Wireframe for the app and selecting font/color styles  | 33% Sam 33% Trevor 33% Rishabh  |
 | Settings  | Allow user to set light/dark mode, change fonts, and sign out  | 100% Trevor  |
-| Profile path  | Gather info from user to store and generate Linkd card | 50% Julian 25% Sam 25% Rishabh  |
+| Profile path  | Gather info from user to store and generate Linkd card | 50% Rishabh 50% Sam |
 | QR/link generation  | Gather links of accounts from user and generate unique QR code displaying links  | 100% Sam |
-| Profile display  | Display all of user's social links  | 50% Sam 50% Julian  |
-| QR display  | Display QR code that links to user's socials | 75% Sam 25% Rishabh  |
+| Profile / QR display  | Display all of user's social links and QR code  | 100% Sam  |
 | QR and account info storage  | Figure out how to store all user info and their social/professional networking links  | 50% Sam 50% Trevor  |
+
+NOTE: our fourth team member, Julian, dropped the class right before the final presentation, so we were very shorthanded. We have listed the work below that Julian planned to do that we did not have enough time to pick up and finish:
+- implement meaningful use of multithreading
+- user profile picture / profile editing functionality
+- two minor view elements (Julian was to implement a segmented control and color picker for background customization in settings)
