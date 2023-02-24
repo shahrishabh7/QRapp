@@ -1,2 +1,2 @@
 # Linkd
-A swift-built iOS app that allows for NFC business cards
+An iOS digital card that allows you to instantly share who you are, with anyone, wherever you go.
